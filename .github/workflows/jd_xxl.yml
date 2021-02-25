@@ -18,8 +18,6 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     steps:
       - name: Checkout
-        run: |
-          git clone ${{ secrets.GIT_CLONE_URL }} ~/scripts
       - name: Use Node.js 10.x
         uses: actions/setup-node@v1
         with:
